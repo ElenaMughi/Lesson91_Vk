@@ -4,6 +4,7 @@ import java.sql.Time;
 
 public class PostInfo {  // все то что статично и общее для всех постов
 
+    private Integer ownerID; // идентификатор хозяина стены -
     private String titleName; // Наименование странички
     private String logoLink;  // Логотип
     private Boolean retweet; // наличие кнопок ретвита | пожаловаться | в закладки и т.д.

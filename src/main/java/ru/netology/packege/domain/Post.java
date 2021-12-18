@@ -1,18 +1,35 @@
 package ru.netology.packege.domain;
 
 import java.util.LinkedList;
-import java.util.List;
 
 public class Post {
-    private Integer postId; // номер записи
-    private Boolean isItFixed;  // свойство закрепления в начале
-    private PostInfo postInfo; // общая часть заголовков
-    private String postText;  // текст записи
-    private String postData;  // дата записи
+    private Integer postId; // номер записи +
+    private Integer fromId; // автор поста -
+    private Integer createdBy; // админ, опубликовавший запись -
+    private Integer replyOwnerId; // владелец записи на которую сделан реплай -
+    private Integer replyPostId; // запись на которую сделан реплай -
+    private Integer friendsOnly; // признак "только для друзей" -
+    private Boolean isItFixed;  // свойство закрепления в начале. у ВК это is_pinned (Integer) +
+//    private PostInfo postInfo; // общая часть заголовков
+    private Copyright copyright; // по смыслу очень похоже на то, что я озаглавила как postInfo -
+    private String postText;  // текст записи +
+    private Integer postData;  // дата записи +- неверный тип
     private String postlink; // ссылка на вложение, картинку, видео
-    private CommentsInfo commentsInfo; // ссылка на комментарий
+    private CommentsInfo commentsInfo; // ссылка на комментарий +
     private LinkedList<Comment> commentsList; // список комментариев
-    private Integer countLikes; // подсчет лайков
+    private LikesInfo likesInfo; // ссылка на лайки. добавлено из-за нового класса -
+    private RepostsInfo repostsInfo; // репосты -
+    private ViewsInfo viewsInfo; // число просмотров -
+    private String postType; // значения - post, copy, reply, postpone, suggest. Затрудняюсь сказать что это -
+    private PostSource postSource; // -
+    private Integer signerId; // идентификатор автора -
+    private Integer canDelete; // может ли пользователь удалить запись -
+    private Integer canEdit; // может ли пользователь изменить запись -
+    private Integer canPin; // может ли пользователь закрепить запись -
+    private Integer markedAsAds; // является ли рекламой -
+    private Boolean isFavorite; // находится ли в закладках у пользователя -
+    private Donut donut; // для платных подписчиков -
+    private Integer PostponedId; // отложенная запись -
 
     public Integer getPostId() {
         return postId;
@@ -38,11 +55,11 @@ public class Post {
         this.postInfo = postInfo;
     }
 
-    public String getPostData() {
+    public Integer getPostData() {
         return postData;
     }
 
-    public void setPostData(String postData) {
+    public void setPostData(Integer postData) {
         this.postData = postData;
     }
 
@@ -76,14 +93,6 @@ public class Post {
 
     public void setCommentsList(LinkedList<Comment> commentsList) {
         this.commentsList = commentsList;
-    }
-
-    public Integer getCountLikes() {
-        return countLikes;
-    }
-
-    public void setCountLikes(Integer countLikes) {
-        this.countLikes = countLikes;
     }
 
 }
