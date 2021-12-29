@@ -2,15 +2,15 @@ package ru.netology.packege.domain;
 
 public class Comment {
 
-    private Integer commentId; // номер/порядок следования комментов
+    private int commentId; // номер/порядок следования комментов
     private String commentsText;  // текст коммента
     private String commentsLink; //ссылка на картинку, если есть.
 
-    public Integer getCommentId() {
+    public int getCommentId() {
         return commentId;
     }
 
-    public void setCommentId(Integer commentId) {
+    public void setCommentId(int commentId) {
         this.commentId = commentId;
     }
 

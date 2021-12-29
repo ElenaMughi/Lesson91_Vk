@@ -4,10 +4,10 @@ import java.sql.Time;
 
 public class PostInfo {  // все то что статично и общее для всех постов
 
-    private Integer ownerID; // идентификатор хозяина стены -
+    private int ownerID; // идентификатор хозяина стены -
     private String titleName; // Наименование странички
     private String logoLink;  // Логотип
-    private Boolean retweet; // наличие кнопок ретвита | пожаловаться | в закладки и т.д.
+    private boolean retweet; // наличие кнопок ретвита | пожаловаться | в закладки и т.д.
 
     public String getTitleName() {
         return titleName;
@@ -25,11 +25,11 @@ public class PostInfo {  // все то что статично и общее д
         this.logoLink = logoLink;
     }
 
-    public Boolean getRetweet() {
+    public boolean getRetweet() {
         return retweet;
     }
 
-    public void setRetweet(Boolean retweet) {
+    public void setRetweet(boolean retweet) {
         this.retweet = retweet;
     }
 

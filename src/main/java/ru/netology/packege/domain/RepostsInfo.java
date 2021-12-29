@@ -1,6 +1,6 @@
 package ru.netology.packege.domain;
 
 public class RepostsInfo {
-    private Integer count; // число репостов -
-    private Boolean userReposted; // репост от текущего юзера -
+    private int count; // число репостов -
+    private boolean userReposted; // репост от текущего юзера -
 }
