@@ -1,9 +1,9 @@
 package ru.netology.packege.domain;
 
 public class Donut {
-    private Boolean isDonut;
-    private Integer paidDuration;
+    private boolean isDonut;
+    private int paidDuration;
 //    private PlaceHolder placeHolder;
-    private Boolean canPublishFreeCopy;
+    private boolean canPublishFreeCopy;
     private String editMode; // значения all, duration.
 }

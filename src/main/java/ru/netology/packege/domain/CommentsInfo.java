@@ -2,17 +2,17 @@ package ru.netology.packege.domain;
 
 public class CommentsInfo {
 
-    private Integer count; // +
+    private int count; // +
 
-    private Boolean canPost; // неверный тип, оставила мой вариант +
+    private boolean canPost; // неверный тип, оставила мой вариант +
 
-    private Integer groupCanPost; // комментарии от сообществ -
+    private int groupCanPost; // комментарии от сообществ -
 
-    private Boolean canClose; // закрытие комментариев текущим пользователем -
+    private boolean canClose; // закрытие комментариев текущим пользователем -
 
-    private Boolean canOpen; // открытие комментариев текущим пользователем -
+    private boolean canOpen; // открытие комментариев текущим пользователем -
 
-    public Integer getCount() {
+    public int getCount() {
         return count;
     }
 
@@ -20,7 +20,7 @@ public class CommentsInfo {
         this.count = count;
     }
 
-    public Boolean getCanPost() { return canPost; }
+    public boolean getCanPost() { return canPost; }
 
     public void setCanPost(boolean canPost) {
         this.canPost = canPost;
